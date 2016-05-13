@@ -1,5 +1,5 @@
 <?php
-    // D002
+    // D002:数の比較
     // 自分の得意な言語で
     // Let's チャレンジ！！
     $input_lines = fgets(STDIN);

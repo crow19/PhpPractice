@@ -1,7 +1,7 @@
 <?php
+    // D023
     // 自分の得意な言語で
     // Let's チャレンジ！！
     $input_lines = fgets(STDIN);
-    $n = strlen($input_lines) -1;
-    echo $n;
+    echo substr_count($input_lines, 'A');
 ?>
