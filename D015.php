@@ -1,11 +1,9 @@
 <?php
+    // D015
     // 自分の得意な言語で
     // Let's チャレンジ！！
-    $s = trim(fgets(STDIN));
     $n = trim(fgets(STDIN));
-    if( $s == $n){
-        echo 'Yes';
-    }else{
-        echo 'No';
+    for ($i=$n; $i>0; $i--){
+        echo $i . "\n";
     }
 ?>
