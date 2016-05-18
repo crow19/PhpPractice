@@ -1,13 +1,39 @@
 <?php
-    // C016
     // 自分の得意な言語で
     // Let's チャレンジ！！
     $input_lines = trim(fgets(STDIN));
-    $n = $input_lines;
+    $input_lines1 = trim(fgets(STDIN));
 
-    $a = array("A", "E", "G", "I","O", "S", "Z");
-    $b = array("4", "3", "6", "1","0", "5", "2");
-    $arr = str_replace($a, $b, $n);
+    $n = explode(" ", $input_lines);
+    $m = explode(" ", $input_lines1);
 
-    echo $arr;
+    /*個数*/
+    $number = $n[0];
+    /*人数*/
+    $people = $n[1];
+    /*ランク上位*/
+    $rank = $n[2];
+
+    for($i=1;$i<=$people;$i++){
+        $input_lines2 = trim(fgets(STDIN));
+        $o[$i] = explode(" ", $input_lines2);
+    }
+
+    $result = array();
+
+    $j=0;
+
+    for($j=0;$j<$people;$j++){
+        $p = 0;
+        for($k=0;$k<$number;$k++){
+            $p += $m[$k] * $o[$j][$k];
+        }
+        $result[$j] = (int)round($p);
+    }
+
+    rsort($result);
+
+    for($l=0;$l<$rank;$l++){
+        echo $result[$l]."\n";
+    }
 ?>
